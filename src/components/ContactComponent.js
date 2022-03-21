@@ -7,7 +7,7 @@ const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
 const isNumber = val => !isNaN(+val);
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val); 
+const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Contact extends Component {
 
@@ -39,7 +39,7 @@ class Contact extends Component {
     }
 
     render() {
-        
+
         return (
             <div className="container">
                 <div className="row">
@@ -198,7 +198,7 @@ class Contact extends Component {
                                 <Label htmlFor="feedback" md={2}>Your Feedback</Label>
                                 <Col md={10}>
                                     <Control.textarea model=".feedback" className="form-control" id="feedback" name="feedback"
-                                        rows="12"/>
+                                        rows="12" />
                                 </Col>
                             </Row>
                             <Row className="form-group">
