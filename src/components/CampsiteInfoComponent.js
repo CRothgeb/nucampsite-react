@@ -3,6 +3,7 @@ import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button, 
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 const maxLength = len => val => !val || (val.length <= len);
 const minLength = len => val => val && (val.length >= len);
@@ -104,13 +105,13 @@ class CommentForm extends Component {
     }
 }
 
-function RenderCampsite({ campsite: { image, name, description } }) {
+function RenderCampsite({ campsite }) {
     return (
         <div className="col-md-5 m-1">
             <Card>
-                <CardImg top src={image} alt={name} />
+                <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
                 <CardBody>
-                    <CardText>{description}</CardText>
+                    <CardText>{campsite.description}</CardText>
                 </CardBody>
             </Card>
         </div>
